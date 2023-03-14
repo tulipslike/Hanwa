@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: Base1;
+  src: url(fonts/NanumSquare_acR.ttf)
+}
+@font-face {
+  font-family: Base1B;
+  src: url(fonts/NanumSquareEB.ttf)
+}
+@font-face {
+  font-family: Base2;
+  src: url(fonts/paybooc-Medium.ttf)
+}
+@font-face {
+  font-family: Base2B;
+  src: url(fonts/paybooc-ExtraBold.ttf)
+}
+@font-face {
+  font-family: Base3;
+  src: url(fonts/tway_air.ttf)
+}
+
+body {font-family: Base1, sans-serif}
+h1, h2, h3, h4, h5, h6, b, strong {
+  font-weight: normal;
+  font-family: Base3
+}
+
+
+
+
+
+
+
+
+
+
+

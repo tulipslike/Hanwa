@@ -1,0 +1,327 @@
+@charset "UTF-8";
+@import url(reset.css);
+@import url(font.css);
+@import url(all.min.css);
+
+/*스타일 공통*/
+body {
+  background: url(../img/bg_visual1.jpg) no-repeat center top / cover;
+}
+/*콘텐츠 크기*/
+[class $= "inner"] {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+/*1 메인 헤더*/
+#header {
+  height: 99px;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.7)
+}
+#header .logo {
+  float: left;
+  padding-top: 30.5px
+}
+#header .logo img {
+  height: 39px
+}
+
+#header .gnb {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 800px;
+  height: 99px;
+  line-height: 99px;
+  margin: auto;
+}
+#header .gnb a {
+  position: relative;
+  display: block;
+  float: left;
+  width: 20%;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Base3";
+  color: #333
+}
+#header .gnb a:hover {
+  color: #f1592a
+}
+#header .gnb a:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  display: block;
+  width: 0%;
+  height: 3px;
+  background: #f1592a;
+  transition: all 0.3s
+}
+#header .gnb a:hover:after {
+  width: 100%;
+  left: 0
+}
+#header .tnb {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%)
+}
+#header .tnb a {
+/*  font-size: small*/
+  color: #777;
+  display: block;
+  float: left;
+  padding: 0 10px
+}
+#header .tnb a:first-child {
+  border-right: 1px solid #ccc
+}
+/*
+":nth-child(-n+2)" 첫 째와 둘 째만 선택 할 때!!
+==> -0 + 2 == 2 
+==> -1 + 2 == 1
+*/
+#header .tnb a:nth-child(-n+2) {
+  margin-top: 6.5px;
+  /*
+    이미지 높이(29) - 글자크기(16) = 13
+    13 / 2 == 6.5px
+  */
+}
+#header .tnb a:hover {
+  color: inherit
+}
+#header .tnb img {
+  height: 29px
+}
+
+/*2 본문*/
+#main .main-title {
+  padding: 70px
+}
+#main .main-title h2 {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 20px 15px 10px rgba(0,0,0,0.3)
+}
+#main .main-title span {
+  font-size: 50%; /*16px == medium == 100% == 1em*/
+}
+
+#main .main-inner {
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  box-shadow: 
+    0 0 30px rgba(0,0,0,0.3);
+  padding-bottom: 100px
+}
+
+#main .location {
+  text-align: right;
+/*  background: #666;*/
+/*  line-height: 40px;*/
+  padding-top: 30px;
+  padding-right: 30px;
+  font-size: small;
+  color: #333
+}
+
+#main .location > * {
+  padding: 0 5px
+}
+
+#main .location a {
+  color: #f1592a;
+  font-weight: bold
+}
+#main .location a:hover {
+  text-decoration: underline 
+}
+#main .location span {
+  color: #f1592a
+}
+/*content*/
+#main .content {
+  padding: 0 82px
+}
+#main .content-1 h3 {
+  font-size: 25px;
+  padding-bottom: 50px;
+}
+
+#main .content-1 p {
+  font-size: 40px;
+  color: #333;
+  padding-bottom: 20px;
+}
+
+#main .content-list {}
+#main .content-list h4 {
+  margin-bottom: 15px
+}
+#main .content-list h4 + p {
+  margin-bottom: 10px
+}
+#main .content-list > li {
+  padding-left: 300px;
+  margin: 40px 0;
+  line-height: 1.6;
+  background: no-repeat left center / auto 153px
+}
+#main .content-list > li:nth-child(1) {
+  background-image: url(../img/k_recruit_01.gif)
+}
+#main .content-list > li:nth-child(2) {
+  background-image: url(../img/k_recruit_02.gif)
+}
+#main .content-list > li:nth-child(3) {
+  background-image: url(../img/k_recruit_03.gif)
+}
+#main .items {}
+#main .items li {
+  color: #555;
+  padding-left: 20px;
+  background: url(../img/bu_squareGrey.gif) no-repeat 10px center
+}
+#main .more-btn {
+  color: #fff;
+  text-align: center;
+}
+#main .more-btn a {
+  display: inline-block;
+  border: 2px solid #f1592a;
+  padding: 5px 25px;
+  border-radius: 2px;
+  background: #f1592a;
+  text-shadow: 2px 2px 2px #111
+}
+#main .more-btn a:hover {
+  background: rgba(196, 151, 137, 0.84);
+  color: #000;
+}
+/*footer*/
+#footer {
+  color: #ddd
+}
+#footer h2 {
+  margin-bottom: 20px;
+}
+#footer h2 b {
+  color: #f1592a;
+}
+#footer .footer-top {
+  background: url(../img/bg-footer.gif)
+}
+#footer .footer-top-inner {
+  padding: 30px 0;
+}
+#footer .footer-frame .vid {
+  float: left
+}
+#footer .footer-frame .right {
+  float: right;
+  width: 50%;
+  
+}
+#footer .fnb {
+  overflow: hidden; /*플로트 처리*/
+  border-bottom: 1px solid #777;
+  padding-bottom: 30px ;
+  margin-bottom: 30px;
+}
+#footer .right ul {
+  float: left;
+  width: 33.3333%;
+  text-align: left;
+}
+#footer .right li {
+  font-size: small;
+  line-height: 2.5;
+}
+#footer .right li:first-child {
+  font-size: inherit;
+  font-weight: bold;
+  color: #f1592a;
+}
+#footer .right li a {
+  display: block;
+  padding: 0 20px;
+}
+#footer .right li a:hover {
+  text-decoration: underline dashed #f1592a;
+}
+
+#footer .sns {
+  text-align: right;
+}
+#footer .sns a {
+  font-size: 30px;
+  padding: 5px;
+  opacity: 0.7;
+}
+#footer .sns a:hover {
+  opacity: 1
+}
+
+#footer address {
+  background: #000
+}
+#footer .address-inner {
+  padding: 30px 0;
+}
+#footer address .copyright {
+  float: left;
+  width: 450px;
+  height: 39px;
+  background: url(../img/footer_copyRight.gif) no-repeat left center / auto 39px
+}
+#footer address .privacy {
+  float: left;
+  line-height: 39px;
+  font-size: small;
+  
+}
+#footer address .privacy a {
+  font-weight: bold
+}
+#footer address .privacy a:hover {
+  color: #e57e5f;
+  opacity: 0.7
+}
+#footer address .group-all-btn {
+  float: right;
+}
+#footer address .group-all-btn a {}
+#footer address .group-all-btn a:hover {
+  display: block;
+  opacity: 0.9;
+}
+#footer address .group-all-btn img {
+  display: block;
+  height: 34px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
